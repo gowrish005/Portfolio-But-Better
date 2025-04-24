@@ -33,7 +33,7 @@
     url("fonts/Montserrat-Light.svg") format("svg");
   font-weight: 300;
   font-style: normal;
-} /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1182,7 +1182,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/contact-visual.png");
+  background-color: #0c0c0c;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

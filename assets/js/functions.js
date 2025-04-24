@@ -1,4 +1,4 @@
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
+// Custom JavaScript for the Gowrish H B portfolio website
 
 $( document ).ready(function() {
 

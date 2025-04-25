@@ -156,6 +156,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -181,6 +182,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 input[type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   box-sizing: content-box;
 }
@@ -764,13 +766,68 @@ body {
 }
 @media (max-width: 600px) {
   .intro--banner {
-    height: 360px;
+    height: 260px; /* reduced height */
+    padding-bottom: 20px; /* add padding */
   }
   .intro--banner h1 {
-    font-size: 55px;
+    font-size: 36px; /* smaller font */
+    margin-bottom: 20px; /* add margin */
   }
   .intro--banner img {
     display: none;
+  }
+  /* Keep intro options visible on mobile */
+  .intro--options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .intro--options > a {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(15, 51, 255, 0.1);
+    border-radius: 8px;
+  }
+  .intro--options h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .intro--options p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 600px) and (max-height: 750px) {
+  .intro--banner {
+    height: auto;
+  }
+  .intro--banner::before,
+  .intro--banner::after {
+    display: none;
+  }
+  .intro--banner h1 {
+    margin-top: 0;
+    font-size: 36px; /* smaller font */
+  }
+  /* CHANGED: Keep intro options visible, but style differently */
+  .intro--options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .intro--banner h1 {
+    font-size: 32px;
+  }
+  .intro--banner h1 sup {
+    font-size: 20px;
+  }
+  .intro--banner button {
+    padding: 3px 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
   }
 }
 @media (max-width: 600px) and (max-height: 750px) {
@@ -857,6 +914,7 @@ body {
   height: 150px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 20px;
 }
 .work--lockup .slider--item-image img {
   height: 100%;

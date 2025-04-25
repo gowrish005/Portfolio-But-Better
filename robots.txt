@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /info.html
+
+Sitemap: https://gowrish.vercel.app/sitemap.xml
